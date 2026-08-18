@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Class Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Ms. Williams</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html" class="active">Class Blog</a>
+    </nav>
+  </header>
+
+  <main class="blog-main">
+    <section class="blog-intro">
+      <h1>Class Blog</h1>
+      <p>
+        Share thoughts, reflections, and questions. Use the class code to post.
+      </p>
+    </section>
+
+    <!-- Password gate -->
+    <section class="password-section">
+      <h2>Enter Class Code to Post</h2>
+      <div class="password-box">
+        <label for="classCode">Class Code</label>
+        <input type="password" id="classCode" placeholder="Enter code..." />
+        <button id="codeSubmit">Unlock Posting</button>
+        <p id="codeMessage" class="code-message"></p>
+      </div>
+    </section>
+
+    <!-- Post form -->
+    <section class="post-section">
+      <h2>Create a New Post</h2>
+      <form id="postForm">
+        <div class="form-group">
+          <label for="postTitle" class="soft-label">🌸 Title</label>
+          <input type="text" id="postTitle" placeholder="Give your post a title" required />
+        </div>
+
+        <div class="form-group">
+          <label for="postReply" class="soft-label">🪶 Reply</label>
+          <textarea id="postReply" rows="4" placeholder="Write your thoughts here..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <span class="soft-label">⭐ Star Rating</span>
+          <div class="star-rating" id="starRating">
+            <span data-value="1">★</span>
+            <span data-value="2">★</span>
+            <span data-value="3">★</span>
+            <span data-value="4">★</span>
+            <span data-value="5">★</span>
+          </div>
+          <input type="hidden" id="ratingValue" value="0" />
+        </div>
+
+        <button type="submit" class="primary-btn" disabled id="postSubmit">
+          Post to Class Blog
+        </button>
+      </form>
+    </section>
+
+    <!-- Posts feed -->
+    <section class="feed-section">
+      <h2>All Posts</h2>
+      <div id="postsContainer" class="posts-container">
+        <!-- New posts will appear here -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Back to <a href="index.html">Home</a></p>
+  </footer>
+
+  <script src="blog.js"></script>
+</body>
+</html>
